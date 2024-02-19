@@ -1,7 +1,7 @@
 # life
 ### JavaScript implementation of [Conway's Game of Life](https://playgameoflife.com/info)
 
-It's a grid-based cellular automoton with the following ruleset:
+It's a grid-based cellular automaton with the following ruleset:
 - For every living cell:
     1. Each cell with one or no neighbors dies, as if by solitude.
     2. Each cell with more than 3 neighbors dies, as if by overpopulation.
