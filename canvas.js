@@ -47,7 +47,7 @@ function handleClick(event) {
     redraw();
 }
 
-// every frame, redraw the grid and apply currently living cells
+// redraw the grid and apply currently living cells
 function redraw() {
     drawGrid();
     ctx.fillStyle = 'cyan';
@@ -94,7 +94,7 @@ function handleMouseMove(event) {
 function updateCanvasSize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight * 0.90;
-    drawGrid();
+    redraw();
 }
 
 // handles when the generate button is clicked
