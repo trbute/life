@@ -7,14 +7,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <canvas id="gridCanvas" width="600" height="400"></canvas>
+    <div class="container">
+        <canvas id="gridCanvas"></canvas>
+        <div class="controls button-controls">
+            <div class="button grid-button" onclick="gridClicked()">Toggle Grid</div>
+            <div id="rewind-button" class="button rewind-button" onclick="rewindClicked()">Rewind</div>
+            <div class="button generate-button" onclick="stepBackClicked()">-1 Gen</div>
+            <div class="button stop-button" onclick="stopClicked()">Stop</div>
+            <div class="button generate-button" onclick="stepForwardClicked()">+1 Gen</div>
+            <div id="play-button" class="button start-button" onclick="playClicked()">Play</div>
+            <div class="button clear-button" onclick="clearClicked()">Clear Board</div>
+        </div>
+        <div class="controls slider-control">
+            <div class="speed-text">Speed:</div>
+            <input type="range" id="speed-slider" min="1" max="60" value="20" step="1">
+            <div class="speed-text" id="speed-value"></div>
+        </div>
+    </div>
     <script src="life.js"></script>
     <script src="canvas.js"></script>
-    <div class="controls">
-        <div class="button grid-button" onclick="gridClicked()">Toggle Grid</div>
-        <div class="button generate-button" onclick="generateClicked()">Generate Once</div>
-        <div id="toggleAction" class="button play-button" onclick="playClicked()">Generate Continuously</div>
-        <div class="button clear-button" onclick="clearClicked()">Clear Board</div>
-    </div>
 </body>
 </html>
